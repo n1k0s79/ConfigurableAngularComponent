@@ -1,0 +1,23 @@
+<p *ngIf="!entities"><em>Loading...</em></p>
+<div *ngIf="entities">
+  <app-entity-header [actions]="listActions" [title]="listName"></app-entity-header>
+
+  <table class='table table-striped' aria-labelledby="tableLabel" >
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Icon</th>
+        <th>Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entity of entities">
+        <td>{{ entity.id }}</td>
+        <td>{{ entity.icon }}</td>
+        <td>{{ entity.description }}</td>
+        <td><a routerLink="/view/{{entityTypeName}}/{{entity.id}}">View</a></td>
+      </tr>
+    </tbody>
+  </table>  
+</div>

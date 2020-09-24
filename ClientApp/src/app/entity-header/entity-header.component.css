@@ -1,0 +1,13 @@
+header {
+  background-color: lightgray;
+  overflow: auto;
+}
+
+h1 {
+  float:left;
+}
+
+.rightAligned {
+  position: relative;
+  float: right;
+}

@@ -1,0 +1,6 @@
+<header>
+  <div class="back">
+    <h1>{{title}}</h1>
+    <button class="rightAligned" *ngFor="let actionName of actions" (click)=buttonClicked(actionName)>{{actionName}}</button>  
+  </div>
+</header>
